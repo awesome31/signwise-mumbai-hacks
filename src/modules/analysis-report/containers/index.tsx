@@ -66,7 +66,7 @@ const AnalysisReportContainer = () => {
       <TouchableOpacity
         style={style}
         onPress={selected ? onUndoSelectParty : onSelectParty(party)}>
-        <Icon name="id-card" size={22} />
+        <Icon name="id-card" size={22} color={COLORS.primary} />
         <View style={styles.spacerFour} />
         <Text style={styles.nameText} numberOfLines={2}>
           {party.partyName}

@@ -1,11 +1,6 @@
 import {useRoute} from '@react-navigation/native';
-import {
-  ActivityIndicator,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import LottieView from 'lottie-react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {strings} from '../../../language';
 import COLORS from '../../../theme';
 import {KeyRiskData} from '../../../types';
@@ -72,7 +67,14 @@ const DetailedInsights = () => {
   if (loading) {
     return (
       <View style={styles.emptyMain}>
-        <ActivityIndicator />
+        <LottieView
+          source={{
+            uri: 'https://lottie.host/936fb8c3-2cfb-43ac-b98e-a5c9f428f296/sZvdI5RnOs.json',
+          }}
+          style={styles.animation}
+          autoPlay
+          loop
+        />
       </View>
     );
   }
@@ -203,6 +205,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: COLORS.white,
+  },
+  animation: {
+    width: 200,
+    height: 200,
   },
 });
 
